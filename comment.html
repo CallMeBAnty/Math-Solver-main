@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Comments</title>
+</head>
+<body>
+
+<!-- Result Display -->
+<div id="result"></div>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  // Retrieve data from localStorage
+  const savedName = localStorage.getItem('name');
+  const savedComment = localStorage.getItem('comment');
+  
+  if (savedName && savedComment) {
+    const resultDiv = document.getElementById('result');
+    resultDiv.innerHTML = `<p><strong>Name:</strong> ${savedName}</p><p><strong>Comment:</strong> ${savedComment}</p>`;
+  }
+});
+</script>
+
+</body>
+</html>
